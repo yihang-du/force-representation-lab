@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "example": true,
+  "episode_id": null,
+  "dataset_version": null,
+  "split": null,
+  "date_utc": null,
+  "objects": {
+    "upper_brick_id": null,
+    "lower_brick_id": null,
+    "pair_id": null,
+    "assembly_cycles_before_episode": null
+  },
+  "setup": {
+    "fixture_version": null,
+    "tool_version": null,
+    "calibration_version": null,
+    "config_sha256": null
+  },
+  "method": {
+    "id": null,
+    "training_seed": null,
+    "checkpoint_sha256": null,
+    "code_commit": null,
+    "controller_version": null
+  },
+  "condition": {
+    "label": null,
+    "perturbation_privileged_for_evaluation_only": {
+      "translation_m": null,
+      "rotation_rad": null
+    }
+  },
+  "timing": {
+    "start_monotonic_s": null,
+    "end_monotonic_s": null,
+    "clock_sync_report": null
+  },
+  "sample_paths": {
+    "raw_wrench": null,
+    "corrected_wrench": null,
+    "robot_state": null,
+    "commanded_actions": null,
+    "policy_camera": null,
+    "evaluation_camera": null,
+    "event_annotations": null,
+    "checksums": null
+  },
+  "outcome": {
+    "model_declared_complete": null,
+    "independent_success": null,
+    "correct_grid_pose": null,
+    "final_height_m": null,
+    "left_seam_m": null,
+    "right_seam_m": null,
+    "verification_method": null,
+    "verification_time_s": null,
+    "termination_reason": null,
+    "failure_tags": [],
+    "recovery_count": null,
+    "ground_truth_reviewer": null
+  },
+  "quality": {
+    "valid_start": null,
+    "data_loss": null,
+    "fixture_moved": null,
+    "tool_slipped": null,
+    "annotation_uncertain": null,
+    "exclusion_reason": null
+  },
+  "notes": "Template only; not a collected episode. Evaluation-only fields must never be used as policy inputs."
+}
