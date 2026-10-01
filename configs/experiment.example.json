@@ -1,0 +1,123 @@
+{
+  "schema_version": "0.1",
+  "status": "proposal_template",
+  "robot_execution_enabled": false,
+  "task": "brick_seating_and_recovery",
+  "geometry": {
+    "upper_stud_layout": [
+      2,
+      4
+    ],
+    "lower_stud_layout": [
+      2,
+      2
+    ],
+    "dimensions_verified": false
+  },
+  "hardware": {
+    "robot_model": null,
+    "gripper_model": null,
+    "force_torque_sensor_model": null,
+    "camera_ids": null
+  },
+  "calibration": {
+    "version": null,
+    "wrench_reference_frame": "assembly",
+    "wrench_reference_point": null,
+    "T_assembly_sensor": null,
+    "tool_mass_kg": null,
+    "tool_center_of_mass_m": null,
+    "bias_wrench": null,
+    "gravity_compensation_verified": false,
+    "clock_sync_method": null,
+    "max_clock_error_s": null
+  },
+  "acquisition": {
+    "force_rate_hz_measured": null,
+    "robot_state_rate_hz_measured": null,
+    "camera_rate_hz_measured": null
+  },
+  "execution": {
+    "controller_version": null,
+    "approach_speed_m_s": null,
+    "insertion_speed_m_s": null,
+    "translation_step_m": null,
+    "rotation_step_rad": null,
+    "unload_distance_m": null,
+    "episode_timeout_s": null,
+    "force_limit_N": null,
+    "torque_limit_Nm": null,
+    "gripper_command": null,
+    "parameters_validated": false,
+    "max_recoveries_proposed": 2
+  },
+  "perturbation": {
+    "xy_offsets_m": null,
+    "roll_pitch_rad": null,
+    "distribution_frozen": false
+  },
+  "ground_truth": {
+    "target_pose_assembly": null,
+    "seated_height_m": null,
+    "height_tolerance_m": null,
+    "seam_tolerance_m": null,
+    "xy_tolerance_m": null,
+    "orientation_tolerance_rad": null,
+    "measurement_method": null,
+    "unload_validation_protocol": null
+  },
+  "model_search": {
+    "causal_window_s": [
+      0.25,
+      0.5,
+      1
+    ],
+    "latent_dim": [
+      64,
+      128
+    ],
+    "encoder_candidates": [
+      "TCN",
+      "GRU"
+    ],
+    "primary_seed": 42,
+    "confirmatory_seeds": [
+      7,
+      2026
+    ]
+  },
+  "budget": {
+    "pilot": {
+      "pairs": 5,
+      "conditions": 3,
+      "repetitions": 4,
+      "episodes": 60
+    },
+    "train": {
+      "pairs": 15,
+      "conditions": 3,
+      "repetitions": 8,
+      "episodes": 360
+    },
+    "validation": {
+      "pairs": 5,
+      "conditions": 3,
+      "repetitions": 4,
+      "episodes": 60
+    },
+    "test": {
+      "pairs": 10,
+      "conditions": 3,
+      "repetitions": 2,
+      "methods": [
+        "B0",
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "episodes": 240
+    },
+    "total_initial_episodes": 720
+  },
+  "note": "Non-executable research template. Null hardware and execution fields require measurement; do not replace them with silent defaults."
+}
