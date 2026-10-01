@@ -1,0 +1,30 @@
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Raw experiment assets and generated models
+data/raw/
+data/processed/
+runs/
+checkpoints/
+wandb/
+*.bag
+*.mcap
+*.mp4
+*.avi
+*.pt
+*.pth
+*.ckpt
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
